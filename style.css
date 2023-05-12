@@ -1,0 +1,95 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#uno{
+    position: relative;
+    color: #333;
+    font-size: 4em;
+    letter-spacing: 5px;
+    border-bottom: 16px solid #333;
+    line-height: 1.4;
+    font-family: consolas;
+    text-transform: uppercase;
+}
+
+#uno::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: dodgerblue;
+    border-bottom: 16px solid dodgerblue;
+    animation: load 1.2s linear infinite;
+    animation-direction: normal;
+    overflow: hidden;
+}
+
+#dos{
+    position: relative;
+    color: #333;
+    font-size: 4em;
+    letter-spacing: 5px;
+    border-bottom: 16px solid #333;
+    line-height: 1.4;
+    font-family: consolas;
+    text-transform: uppercase;
+}
+
+#dos::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: dodgerblue;
+    border-bottom: 16px solid dodgerblue;
+    animation: load 1.2s linear infinite;
+    animation-direction: alternate;
+    overflow: hidden;
+}
+
+#tres{
+    position: relative;
+    color: #333;
+    font-size: 4em;
+    letter-spacing: 5px;
+    border-bottom: 16px solid #333;
+    line-height: 1.4;
+    font-family: consolas;
+    text-transform: uppercase;
+}
+
+#tres::before{
+    content: "loading...";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: dodgerblue;
+    border-bottom: 16px solid dodgerblue;
+    animation: load 1.2s linear infinite;
+    animation-direction: alternate;
+    animation-iteration-count: 3;
+    animation-delay: 2s;
+    overflow: hidden;
+}
+
+@keyframes load {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
